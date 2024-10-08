@@ -13,7 +13,7 @@ mongoose.connect("mongodb+srv://test_ili:justtesting@collaborativejournal.itlf7.
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-app.post('/addUser', async (req, res) => {
+app.post('/Signup', async (req, res) => {
     const {user, email, password} = req.body;
     const newUser = new userCollection({
         name: user,
@@ -24,6 +24,22 @@ app.post('/addUser', async (req, res) => {
     res.send('User added successfully');
   });
 
+app.post('/Login', async (req, res) => {
+    const {user, email, password} = req.body;
+    try {
+        const check = await userCollection.findOne({name: user, email: email, password: password})
+        if(check) {
+            res.send("Exist")
+        }
+        else {
+            res.send("Not found")
+        }
+    }
+    catch(e) {
+        res.send("error")
+    }
+})
 app.listen(5001, () => {
     console.log('Server is running on port 5001')
 })
+//TODO verify what kind of error the login info has

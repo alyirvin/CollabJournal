@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-const LoginSignup = () => {
+const Signup = () => {
     const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -10,7 +10,8 @@ const LoginSignup = () => {
         // console.log('UserName:', user);
         // console.log('Email:', email);
         // console.log('Password:', password);
-        await axios.post('http://localhost:5001/addUser', { user, email, password });
+        await axios.post('http://localhost:5001/Signup', { user, email, password });
+        // TODO send an email for verification
         alert('User information saved!');
       };
     return (
@@ -55,4 +56,7 @@ const LoginSignup = () => {
     )
 }
 
-export default LoginSignup;
+export default Signup;
+
+
+//TODO JCrypt
