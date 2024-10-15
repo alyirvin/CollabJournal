@@ -11,6 +11,7 @@ body {
 .button {
     width: 354px;
     height: 59px;
+    margin-top: 30px;
     border-radius: 51px;
     border-width: 1px;
     font-family: "Krona One";
@@ -20,6 +21,10 @@ body {
     background-color: #B4C4A0;
 }
 
+.button-prop {
+    text-decoration: none;
+}
+
 .input {
     width: 516px;
     height: 52px;
@@ -27,8 +32,6 @@ body {
     border-width: 0px;
     font-family: "Krona One";
     font-size: 16px;
-    padding-top: 20px;
-    padding-bottom:20px;
     background-color: #EFEFEF;
 }
 
@@ -44,6 +47,7 @@ body {
     align-items: center;
 }
 
+
 .title {
     width: 900px;
     height: 59px;
@@ -55,4 +59,36 @@ body {
     flex-direction: column;
     align-items: center;
     color: #000000;
+}
+
+.textTwo {
+    width: 237px;
+    height: 31px;
+    font-family: "KoHo";
+    font-size: 24px;
+    text-align: left;
+    color: #000000;
+}
+
+
+.containerOne {
+    width: 516px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures the label aligns left with the input box */
+}
+
+.containerSpiral {
+    width: 1016px; /* Match the width of the page */
+    display: flex;
+    justify-content: start; /* Ensure spirals are at the left and right */
+    align-items: flex-start; /* Align the spirals with the top of the page */
+    margin-top: 0px; /* Optional: Adjust the spacing from the top */
+    
+}
+
+.spiral-part {
+    top: 0;
+    width: 100%; /* Make sure the image scales naturally */
+    height: 95%; 
 }
