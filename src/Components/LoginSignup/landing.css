@@ -5,6 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color:#9A8979;
+    overflow: hidden;
         
 }
 
