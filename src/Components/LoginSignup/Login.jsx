@@ -1,4 +1,4 @@
-import './loginforgot.css';
+import './login.css';
 import React, {useState} from 'react';
 import axios from 'axios';
 import { toBeChecked } from '@testing-library/jest-dom/matchers';
@@ -10,7 +10,7 @@ const Login = () => {
         e.preventDefault();
         // how to validate username and password
         // console.log('UserName:', user);
-        // console.log('Email:', email);
+        // console.log('Email:' `, email);
         // console.log('Password:', password);
         try {
             await axios.post('http://localhost:5001/Login', { user, email, password })
