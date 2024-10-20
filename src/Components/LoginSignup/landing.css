@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Krona+One');
 
-body {
+.landingContainer body {
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -9,7 +9,7 @@ body {
         
 }
 
-.dashes {
+.landingContainer .dashes {
     user-select: none;
 
     color: white;
@@ -20,14 +20,14 @@ body {
     z-index: 0;
 }
 
-.dashed-line {
+.landingContainer .dashed-line {
     
     position: absolute;
     rotate: 90deg;
 }
 
 
-.button-container {
+.landingContainer .button-container {
     padding-top: 50%;
     display: flex;
     flex-direction: column;
@@ -35,11 +35,11 @@ body {
     align-items: center;
 }
 
-.button-container > div {
+.landingContainer .button-container > div {
     margin: 50px;
 }
 
-.button {
+.landingContainer .button {
     width: 354px;
     height: 59px;
     border-radius: 51px;
@@ -54,30 +54,30 @@ body {
     
 }
 
-.button:hover {
+.landingContainer .button:hover {
     box-shadow: 5px 8px 5px #867f79;
     cursor: pointer;
 }
 
-.button-text {
+.landingContainer .button-text {
     height: fit-content;
     width: fit-content;
 }
 
-.button-prop {
+.landingContainer .button-prop {
     height: fit-content;
     text-decoration: none;
     color: black;
 }
 
 
-.text {
+.landingContainer .text {
     font-family: "Krona One";
     font-size: 16px;
     margin: 30px;
 }
 
-.right-side {
+.landingContainer .right-side {
     float: right;
     width: 600px;
     height: 100vh;
@@ -88,7 +88,7 @@ body {
     z-index: 1;
 }
 
-.spiral-container {
+.landingContainer .spiral-container {
     
     width: fit-content;
     height: 100vh;
@@ -102,7 +102,7 @@ body {
 
 }
 
-.left-side {
+.landingContainer .left-side {
     width: 480px;
     height: 100%;
     padding-left: 350px;
@@ -113,7 +113,7 @@ body {
 }
     
 
-#logo {
+.landingContainer #logo {
     width: 700px;
     user-select: none;
     -webkit-user-drag: none;
@@ -121,7 +121,7 @@ body {
     z-index: 3;
 }
 
-#spiral {
+.landingContainer #spiral {
     user-select: none;
     -webkit-user-drag: none;
     
