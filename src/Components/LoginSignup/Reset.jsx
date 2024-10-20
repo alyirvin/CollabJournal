@@ -5,13 +5,9 @@ import spirals from './../../images/spirals.png';
 
 const Reset = () => {
     return(
-      <div className="page">
+      <div className="resetContainer">
         <div className="containerSpiral">
-          <img
-            src="spirals.png"
-            alt="Journal Spiral Part 1"
-            className="spiral-part"
-          />
+          <img src={spirals} alt="spirals" id="spirals"/>
         </div>
         <p className="title">RESET PASSWORD</p>
         <div className="containerOne">

@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=KoHo');
 @import url('https://fonts.googleapis.com/css?family=Londrina Solid');
 
-body {
+.forgotContainer body {
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -13,7 +13,7 @@ body {
     justify-content: center;
 }
 
-.button {
+.forgotContainer button {
     width: 354px;
     height: 59px;
     margin-top: 30px;
@@ -26,11 +26,11 @@ body {
     background-color: #B4C4A0;
 }
 
-.button-prop {
+.forgotContainer button-prop {
     text-decoration: none;
 }
 
-.input {
+.forgotContainer input {
     width: 516px;
     height: 52px;
     border-radius: 17px;
@@ -40,7 +40,7 @@ body {
     background-color: #EFEFEF;
 }
 
-.page {
+.forgotContainer page {
     width: 1016px;
     height: 610px;
     border-radius: 19px;
@@ -52,7 +52,7 @@ body {
     position: relative;
 }
 
-.textOne {
+.forgotContainer textOne {
     width: 900px;
     height: 59px;
     font-family: "KoHo";
@@ -65,7 +65,7 @@ body {
     color: #000000;
 }
 
-.title {
+.forgotContainer title {
     width: 900px;
     height: 59px;
     font-family: "Londrina Solid";
@@ -78,7 +78,7 @@ body {
     color: #000000;
 }
 
-.textTwo {
+.forgotContainer textTwo {
     width: 58px;
     height: 31px;
     font-family: "KoHo";
@@ -87,14 +87,14 @@ body {
     color: #000000;
 }
 
-.containerOne {
+.forgotContainer containerOne {
     width: 516px;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Ensures the label aligns left with the input box */
 }
 
-.containerSpiral {
+.forgotContainer containerSpiral {
     width: 1016px; /* Match the width of the page */
     display: flex;
     justify-content: start; /* Ensure spirals are at the left and right */
@@ -103,7 +103,7 @@ body {
     
 }
 
-.spiral-part {
+.forgotContainer spiral-part {
     top: 0;
     width: 100%; /* Make sure the image scales naturally */
     height: 95%; 

@@ -5,9 +5,9 @@ import spirals from './../../images/spirals.png';
 
 const Forgot = () => {
     return(
-        <div className="page">
+        <div className="forgotContainer">
             <div className="containerSpiral">
-                <img src={spirals} alt="spiral" id="spiral"/>
+                <img src={spirals} alt="spirals" id="spirals"/>
             </div>
             <p className="title">FORGOT PASSWORD</p>
             <label className="textOne">
