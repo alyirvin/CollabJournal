@@ -1,0 +1,110 @@
+.title {
+    margin: 50px;
+    font-family: "Londrina Solid";
+    font-size: 36px;
+}
+
+.journal-container {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.journal-item-container {
+    float: inline-start;
+    width: 310px;
+    height: 360px;
+    background-color: #9A8979;
+    border-radius: 24px;
+    margin-right: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 8px 8px 4px  #00000046;
+}
+
+.journal-name-container {
+    width: 200px;
+    height: 50px;
+    margin-top: 80px;
+    margin-left: 20px;
+    
+}
+
+#journal-name {
+    width: 200px;
+    background-color: #9A8979;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none   ;
+}
+
+#journal-name:focus {
+    border: none;
+    border-bottom: 2px solid white;
+    box-shadow: none;
+}
+
+input[type='text'] {
+    font-family: 'Londrina Solid';
+    font-size: 34px;
+    text-align: center;
+}
+
+.spiral-container {
+    
+    width: fit-content; 
+    position: absolute;
+    margin-top: 5px;
+    left: 60px;
+    z-index: 2;
+
+}
+
+#spiral {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.button-container {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    margin-top: 150px;
+    margin-left: 25px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 96px;
+    height: 36px;
+    border-radius: 24px;
+    border-width: 0.5px;
+    border-color: white;
+    font-family: "Krona One";
+    font-size: 16px;
+    margin: 10px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px #968f89;
+    
+}
+
+.button:hover {
+    box-shadow: 5px 8px 5px #867f79;
+    cursor: pointer;
+}
+
+.button-text {
+    height: fit-content;
+    width: fit-content;
+}
+
+.button-prop {
+    height: fit-content;
+    text-decoration: none;
+    color: black;
+}
