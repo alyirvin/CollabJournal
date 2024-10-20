@@ -1,9 +1,7 @@
-# Updated Create account function
+# Reorganize the files, convert html to js and implement into react app.js
 
-Used the front-end login template from copilot. 
+registration password hashing,  login verification 
 
-Finished the implementation of login/create account, locally tested. (The UI this branch currently has is terrible)
+email to be combined into front end
 
-Still implementing the forgot password functionality
-
- 
+groups to implemented
