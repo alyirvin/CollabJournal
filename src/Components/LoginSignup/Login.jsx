@@ -35,26 +35,26 @@ const Login = () => {
         <div class = "biggerpage">
             <div class = "section">
                     <div class = "type">
-                        <h2>LOG IN</h2>
+                        LOG IN
                     </div>
             <form onSubmit={handleSubmit}>
                 <div class = "type">
-                <label>Username:</label>
-                <input class = "enter"
-                    type="user"
-                    value={user}
-                    onChange={(e) => setUser(e.target.value)}
-                    required
-                />
+                    <label>Username:</label>
+                    <input class = "enter"
+                        type="user"
+                        value={user}
+                        onChange={(e) => setUser(e.target.value)}
+                        required
+                    />
                 </div>
                 <div class = "type">
-                <label>Email:</label>
-                <input class = "enter"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
+                    <label>Email:</label>
+                    <input class = "enter"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
                 </div>
                 <div class = "type">
                 <label>Password:</label>
