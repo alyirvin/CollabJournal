@@ -31,12 +31,12 @@
     height: 360px;
     background-color: #9A8979;
     border-radius: 24px;
-    margin-right: 40px;
+    margin-right: 100px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-bottom: 50px;
     box-shadow: 8px 8px 4px  #00000046;
 }
 
@@ -63,7 +63,7 @@
     box-shadow: none;
 }
 
-.groupsContainer .input[type='text'] {
+.groupsContainer input[type='text'] {
     font-family: 'Londrina Solid';
     font-size: 34px;
     text-align: center;
