@@ -1,25 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Krona+One');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
 
-body {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-color: white;
+.groupsContainer body {
+    margin: 5px;
+    background-color:white;
+    overflow: hidden;
         
 }
-.title {
+.groupsContainer main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.groupsContainer .title {
     margin: 50px;
     font-family: "Londrina Solid";
     font-size: 36px;
 }
 
-.journal-container {
+.groupsContainer .journal-container {
     margin-top: 10px;
     margin-left: 100px;
 }
 
-.journal-item-container {
+.groupsContainer .journal-item-container {
     float: inline-start;
     width: 310px;
     height: 360px;
@@ -34,7 +40,7 @@ body {
     box-shadow: 8px 8px 4px  #00000046;
 }
 
-.journal-name-container {
+.groupsContainer .journal-name-container {
     width: 200px;
     height: 50px;
     margin-top: 80px;
@@ -42,7 +48,7 @@ body {
     
 }
 
-#journal-name {
+.groupsContainer #journal-name {
     width: 200px;
     background-color: #9A8979;
     color: white;
@@ -51,19 +57,19 @@ body {
     outline: none   ;
 }
 
-#journal-name:focus {
+.groupsContainer #journal-name:focus {
     border: none;
     border-bottom: 2px solid white;
     box-shadow: none;
 }
 
-input[type='text'] {
+.groupsContainer .input[type='text'] {
     font-family: 'Londrina Solid';
     font-size: 34px;
     text-align: center;
 }
 
-.spiral-container {
+.groupsContainer .spiral-container {
     width: fit-content; 
     position: absolute;
     margin-top: 5px;
@@ -71,12 +77,12 @@ input[type='text'] {
     z-index: 2;
 }
 
-#spiral {
+.groupsContainer #spiral {
     -webkit-user-drag: none;
     user-select: none;
 }
 
-.button-container {
+.groupsContainer .button-container {
     width: 240px;
     height: 50px;
     display: flex;
@@ -87,7 +93,7 @@ input[type='text'] {
     justify-content: center;
 }
 
-.button {
+.groupsContainer .button {
     width: 96px;
     height: 36px;
     border-radius: 24px;
@@ -101,17 +107,17 @@ input[type='text'] {
     
 }
 
-.button:hover {
+.groupsContainer .button:hover {
     box-shadow: 5px 8px 5px #867f79;
     cursor: pointer;
 }
 
-.button-text {
+.groupsContainer .button-text {
     height: fit-content;
     width: fit-content;
 }
 
-.button-prop {
+.groupsContainer .button-prop {
     height: fit-content;
     text-decoration: none;
     color: black;

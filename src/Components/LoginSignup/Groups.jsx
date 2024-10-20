@@ -4,10 +4,11 @@ import './groups.css';
 import spiralSmall from './../../images/spiral-bind-short.png';
 const Groups = () => {
     return(
-        <div>
+        <div className="groupsContainer">
             <div className="title">
                 MY JOURNALS
             </div>
+
                 <div className="spiral-container">
                     <img src={spiralSmall} alt="spiralSmall"/>
                 </div>
