@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './landing.css';
 import spiralBind from './../../images/spiralBind.png';
 import logo from './../../images/logo.png';
+import { Link } from 'react-router-dom';
+
 
 const Landing = () => {
 
@@ -19,17 +21,17 @@ const Landing = () => {
                 <div className = "button-container">
 
                     <button className="button">
-                        <a className="button-prop" href="login.jsx">
+                        <Link className="button-prop" to="/Login">
                         <div id="button-text">LOG IN</div>
-                        </a>
+                        </Link>
                     </button>
 
                     <p className="text">OR</p>
 
                     <button className="button">
-                        <a className="button-prop" href="signup.jsx">
+                        <Link className="button-prop" to="/Signup">
                         <div id="button-text">CREATE ACCOUNT</div>
-                        </a> 
+                        </Link> 
                     </button>
 
                 </div>
