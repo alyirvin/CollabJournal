@@ -8,7 +8,7 @@ const Groups = () => {
         <div className="groupsContainer">
             <div className="title">
                 MY JOURNALS
-            </div>
+            </div>         
             <MiniJournal />
             <MiniJournal />
         </div>

@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import './groups.css';
+import './miniJournal.css';
 import spiralSmall from './../../images/spiral-bind-short.png';
 
 const MiniJournal = () => {
     return(
-        <div className="groupsContainer">
+        <div className="miniJournalContainer">
                 <div className="journal-container">
 
                     <div className="journal-item-container">
@@ -17,7 +17,7 @@ const MiniJournal = () => {
                             <input 
                                 type="text" 
                                 id="journal-name" 
-                                maxlength="20"
+                                maxLength="20"
                             /> 
                         </div>
 
