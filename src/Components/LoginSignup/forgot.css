@@ -26,7 +26,7 @@
     background-color: #B4C4A0;
 }
 
-.forgotContainer button-prop {
+.forgotContainer .button-prop {
     text-decoration: none;
 }
 
@@ -40,7 +40,7 @@
     background-color: #EFEFEF;
 }
 
-.forgotContainer page {
+.forgotContainer .page {
     width: 1016px;
     height: 610px;
     border-radius: 19px;
@@ -52,7 +52,7 @@
     position: relative;
 }
 
-.forgotContainer textOne {
+.forgotContainer .textOne {
     width: 900px;
     height: 59px;
     font-family: "KoHo";
@@ -65,7 +65,7 @@
     color: #000000;
 }
 
-.forgotContainer title {
+.forgotContainer .title {
     width: 900px;
     height: 59px;
     font-family: "Londrina Solid";
@@ -78,7 +78,7 @@
     color: #000000;
 }
 
-.forgotContainer textTwo {
+.forgotContainer .textTwo {
     width: 58px;
     height: 31px;
     font-family: "KoHo";
@@ -87,14 +87,14 @@
     color: #000000;
 }
 
-.forgotContainer containerOne {
+.forgotContainer .containerOne {
     width: 516px;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Ensures the label aligns left with the input box */
 }
 
-.forgotContainer containerSpiral {
+.forgotContainer .containerSpiral {
     width: 1016px; /* Match the width of the page */
     display: flex;
     justify-content: start; /* Ensure spirals are at the left and right */
@@ -103,7 +103,7 @@
     
 }
 
-.forgotContainer spiral-part {
+.forgotContainer .spiral-part {
     top: 0;
     width: 100%; /* Make sure the image scales naturally */
     height: 95%; 
