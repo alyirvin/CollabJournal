@@ -1,3 +1,4 @@
+import './loginforgot.css';
 import React, {useState} from 'react';
 import axios from 'axios';
 import { toBeChecked } from '@testing-library/jest-dom/matchers';
@@ -68,6 +69,7 @@ const Login = () => {
                 </form>
             </div>
         </div>
+        
     )
 }
 export default Login;
