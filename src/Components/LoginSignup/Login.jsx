@@ -31,45 +31,48 @@ const Login = () => {
         }
       };
     return (
-        <div>
-            <div className = 'container'>
-                <div className = 'header'>
-                    <div className = "text">Login</div>
-                    <div className = "underline"></div>
+        <div class = "loginContainer">
+        <div class = "biggerpage">
+            <div class = "section">
+                    <div class = "type">
+                        <h2>LOG IN</h2>
+                    </div>
+            <form onSubmit={handleSubmit}>
+                <div class = "type">
+                <label>Username:</label>
+                <input class = "enter"
+                    type="user"
+                    value={user}
+                    onChange={(e) => setUser(e.target.value)}
+                    required
+                />
                 </div>
-                <form onSubmit={handleSubmit}>
-                    <div>
-                    <label>Username:</label>
-                    <input
-                        type="user"
-                        value={user}
-                        onChange={(e) => setUser(e.target.value)}
-                        required
-                    />
-                    </div>
-                    <div>
-                    <label>Email:</label>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                    </div>
-                    <div>
-                    <label>Password:</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                    </div>
-                    <button type="submit">Login</button>
-                </form>
-            </div>
+                <div class = "type">
+                <label>Email:</label>
+                <input class = "enter"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                </div>
+                <div class = "type">
+                <label>Password:</label>
+                <input class = "enter"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                />
+                </div>
+                <button class = "button" type="submit">Login</button>
+            </form>
         </div>
-        
+        <div class = "section">
+
+        </div>
+    </div> 
+</div>
     )
 }
 export default Login;
