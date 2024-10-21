@@ -22,6 +22,8 @@
     align-items: center;
     margin-bottom: 50px;
     box-shadow: 8px 8px 4px  #00000046;
+    position: relative;
+    padding: 0;
 }
 
 .miniJournalContainer .journal-name-container {
@@ -57,9 +59,15 @@
     width: fit-content; 
     position: absolute;
     margin-top: 5px;
-    left: 60px;
+    left: -50px;
     z-index: 2;
 }
+
+.miniJournalContainer .spiral-container img {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
 
 .miniJournalContainer #spiral {
     -webkit-user-drag: none;
