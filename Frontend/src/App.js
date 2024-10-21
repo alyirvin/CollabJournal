@@ -1,10 +1,10 @@
 import './App.css';
-import Landing from './Components/LoginSignup/Landing';
-import Signup from './Components/LoginSignup/Signup';
-import Login from './Components/LoginSignup/Login';
+import Landing from '../../src/Components/LoginSignup/Landing';
+import Signup from './Components/Signup';
+import Login from '../../src/Components/LoginSignup/Login';
 import Forgot from './Components/LoginSignup/Forgot';
 import Groups from './Components/LoginSignup/Groups';
-import Reset from './Components/LoginSignup/Reset';
+import Reset from './Components/Reset';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
