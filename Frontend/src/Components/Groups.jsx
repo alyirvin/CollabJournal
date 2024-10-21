@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import './groups.css';
-import spiralSmall from './../../images/spiral-bind-short.png';
+import spiralSmall from './images/spiral-bind-short.png';
 import MiniJournal from './MiniJournal'
 const Groups = () => {
     return(

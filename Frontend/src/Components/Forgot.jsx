@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import './forgot.css';
-import spirals from './../../images/spirals.png';
+import spirals from './images/spirals.png';
 
 const Forgot = () => {
     return(

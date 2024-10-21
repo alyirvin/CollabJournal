@@ -81,7 +81,7 @@
     float: right;
     width: 600px;
     height: 100vh;
-    background-image: url("./../../images/paper-texture.png");
+    background-image: url("./images/paper-texture.png");
     background-repeat: repeat-y;
     background-size: auto;
     box-shadow: -8px 8px 10px 5px #332c27;
@@ -92,7 +92,7 @@
     
     width: fit-content;
     height: 100vh;
-    background-image: url("./../../images/spiralBind.png");
+    background-image: url("./images/spiralBind.png");
     background-repeat: repeat-y;
     background-size: auto;
     right: 520px;

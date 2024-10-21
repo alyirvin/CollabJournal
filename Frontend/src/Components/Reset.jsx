@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import './reset.css';
-import spirals from './../../images/spirals.png';
+import spirals from './images/spirals.png';
 
 const Reset = () => {
     return(

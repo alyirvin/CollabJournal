@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './landing.css';
-import spiralBind from './../../images/spiralBind.png';
-import logo from './../../images/logo.png';
+import spiralBind from './images/spiralBind.png';
+import logo from './images/logo.png';
 import { Link } from 'react-router-dom';
 
 

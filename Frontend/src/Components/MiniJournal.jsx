@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import './miniJournal.css';
-import spiralSmall from './../../images/spiral-bind-short.png';
+import spiralSmall from './images/spiral-bind-short.png';
 
 const MiniJournal = () => {
     return(
