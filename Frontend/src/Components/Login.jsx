@@ -1,3 +1,4 @@
+import './login.css';
 import React, {useState} from 'react';
 import axios from 'axios';
 import { toBeChecked } from '@testing-library/jest-dom/matchers';
@@ -9,7 +10,7 @@ const Login = () => {
         e.preventDefault();
         // how to validate username and password
         // console.log('UserName:', user);
-        // console.log('Email:', email);
+        // console.log('Email:' `, email);
         // console.log('Password:', password);
         try {
             await axios.post('http://localhost:5001/Login', { user, email, password })
@@ -30,44 +31,48 @@ const Login = () => {
         }
       };
     return (
-        <div>
-            <div className = 'container'>
-                <div className = 'header'>
-                    <div className = "text">Login</div>
-                    <div className = "underline"></div>
-                </div>
-                <form onSubmit={handleSubmit}>
-                    <div>
+        <div class = "loginContainer">
+        <div class = "biggerpage">
+            <div class = "section">
+                    <div class = "type">
+                        LOG IN
+                    </div>
+            <form onSubmit={handleSubmit}>
+                <div class = "type">
                     <label>Username:</label>
-                    <input
+                    <input class = "enter"
                         type="user"
                         value={user}
                         onChange={(e) => setUser(e.target.value)}
                         required
                     />
-                    </div>
-                    <div>
+                </div>
+                <div class = "type">
                     <label>Email:</label>
-                    <input
+                    <input class = "enter"
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
-                    </div>
-                    <div>
-                    <label>Password:</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                    </div>
-                    <button type="submit">Login</button>
-                </form>
-            </div>
+                </div>
+                <div class = "type">
+                <label>Password:</label>
+                <input class = "enter"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                />
+                </div>
+                <button class = "button" type="submit">Login</button>
+            </form>
         </div>
+        <div class = "section">
+
+        </div>
+    </div> 
+</div>
     )
 }
 export default Login;

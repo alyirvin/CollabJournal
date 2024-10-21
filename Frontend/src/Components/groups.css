@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Krona+One');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
+
+.groupsContainer body {
+    margin: 5px;
+    background-color:white;
+    overflow: hidden;
+        
+}
+.groupsContainer main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.groupsContainer .title {
+    margin: 50px;
+    font-family: "Londrina Solid";
+    font-size: 36px;
+}

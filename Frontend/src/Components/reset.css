@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Krona+One');
+@import url('https://fonts.googleapis.com/css?family=KoHo');
+@import url('https://fonts.googleapis.com/css?family=Londrina Solid');
+
+.resetContainer body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color:#9A8979;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resetContainer button {
+    width: 354px;
+    height: 59px;
+    margin-top: 30px;
+    border-radius: 51px;
+    border-width: 1px;
+    font-family: "Krona One";
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    background-color: #B4C4A0;
+}
+
+.resetContainer .button-prop {
+    text-decoration: none;
+}
+
+.resetContainer input {
+    width: 516px;
+    height: 52px;
+    border-radius: 17px;
+    border-width: 0px;
+    font-family: "Krona One";
+    font-size: 16px;
+    background-color: #EFEFEF;
+}
+
+.resetContainer .page {
+    width: 1016px;
+    height: 610px;
+    border-radius: 19px;
+    border-width: 60px;
+    opacity: 0px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.resetContainer .title {
+    width: 900px;
+    height: 59px;
+    font-family: "Londrina Solid";
+    font-size: 36px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+}
+
+.resetContainer .textTwo {
+    width: 237px;
+    height: 31px;
+    font-family: "KoHo";
+    font-size: 24px;
+    text-align: left;
+    color: #000000;
+}
+
+
+.resetContainer .containerOne {
+    width: 516px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures the label aligns left with the input box */
+}
+
+.resetContainer .containerSpiral {
+    width: 1016px; /* Match the width of the page */
+    display: flex;
+    justify-content: start; /* Ensure spirals are at the left and right */
+    align-items: flex-start; /* Align the spirals with the top of the page */
+    margin-top: 0px; /* Optional: Adjust the spacing from the top */
+    
+}
+
+.resetContainer .spiral-part {
+    top: 0;
+    width: 100%; /* Make sure the image scales naturally */
+    height: 95%; 
+}
