@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Krona+One');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
 
+.groupsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .groupsContainer body {
     margin: 5px;
     background-color:white;
@@ -18,4 +24,67 @@
     margin: 50px;
     font-family: "Londrina Solid";
     font-size: 36px;
+}
+
+.groupsContainer .journal-button-container {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.groupsContainer .miniJournalContainer {
+    display: flex;
+    align-items: center;
+}
+
+.groupsContainer .add-button {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.groupsContainer .add-journal-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #c9c9c9;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-left: 50px;
+    align-self: center;
+}
+
+.groupsContainer .add-journal-button:hover {
+    background-color: rgb(143, 143, 143);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .groupsContainer .journal-button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .groupsContainer .miniJournalContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .groupsContainer .add-button-container {
+        margin-left: 0;
+        margin-top: 10px; 
+        padding:10px;
+    }
 }

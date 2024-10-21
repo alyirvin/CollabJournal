@@ -7,9 +7,18 @@ const Groups = () => {
         <div className="groupsContainer">
             <div className="title">
                 MY JOURNALS
-            </div>         
-            <MiniJournal />
-            <MiniJournal />
+            </div>
+
+            <div className="journal-button-container">
+                <div className="miniJournalContainer">       
+                    <MiniJournal />
+                    <MiniJournal />
+                </div> 
+
+                <div className="add-button">
+                    <button className="add-journal-button">+</button>
+                </div>
+            </div> 
         </div>
     
     )
