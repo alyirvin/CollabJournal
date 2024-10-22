@@ -1,6 +1,8 @@
 import './login.css';
 import React, {useState} from 'react';
 import axios from 'axios';
+import spiralBind from './images/spirals.png';
+import background from './images/background.png';
 import { toBeChecked } from '@testing-library/jest-dom/matchers';
 const Login = () => {
     const [user, setUser] = useState('');
@@ -32,47 +34,63 @@ const Login = () => {
       };
     return (
         <div class = "loginContainer">
-        <div class = "biggerpage">
-            <div class = "section">
-                    <div class = "type">
-                        LOG IN
+            <div class = 'spiraled'>
+                <div class = "biggerpage">
+                    <div class = "section">
+                        <div class = "title">
+                            LOG IN
+                        </div>
+                            <form onSubmit={handleSubmit}>
+                            <div class = 'type'>
+                                <label>Username:</label>
+                                <input class = "enter"
+                                    type="user"
+                                    value={user}
+                                    onChange={(e) => setUser(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div class = 'type'>
+                                <label>Email:</label>
+                                <input class = "enter"
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div class = 'type1'>
+                            <label>Password:</label>
+                            <input class = "enter"
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                            <a src = "reset.jsx">&nbsp;Forgot Password?</a>
+                            </div>
+                            <div class = 'type'>
+                            <button class = "button" type="submit">Login</button>
+                            </div>
+                            </form>
                     </div>
-            <form onSubmit={handleSubmit}>
-                <div class = "type">
-                    <label>Username:</label>
-                    <input class = "enter"
-                        type="user"
-                        value={user}
-                        onChange={(e) => setUser(e.target.value)}
-                        required
-                    />
+                    <div class = "section2">
+                        <div class = "or">
+                            OR
+                        </div>
+                        <div class = "continue">
+                            <button class="button">
+                                CONTINUE WITH GOOGLE
+                            </button>
+                            <button class="button">
+                                CONTINUE WITH FACEBOOK
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class = "type">
-                    <label>Email:</label>
-                    <input class = "enter"
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-                <div class = "type">
-                <label>Password:</label>
-                <input class = "enter"
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                </div>
-                <button class = "button" type="submit">Login</button>
-            </form>
+                <img src={spiralBind} class = 'spirals'></img>
+            </div>
         </div>
-        <div class = "section">
-
-        </div>
-    </div> 
-</div>
     )
 }
 export default Login;
