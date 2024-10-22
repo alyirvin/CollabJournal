@@ -1,3 +1,12 @@
+.loginContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9A8979;
+}
+
 .loginContainer body {
     height: 100%;
     width: 100%;
@@ -22,15 +31,6 @@
     padding: 10px; 
     box-sizing: border-box;
     font-size: 20px; 
-}
-
-.loginContainer {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #9A8979;
 }
 
 .loginContainer .spirals {

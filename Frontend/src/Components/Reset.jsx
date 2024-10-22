@@ -1,9 +1,30 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './reset.css';
 import spirals from './images/spirals.png';
 
 const Reset = () => {
+    const [email, setEmail] = useState('');
+    const [newPassword, setNewPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (newPassword !== confirmPassword) {
+            setMessage("Passwords do not match");
+            return;
+        }
+        try {
+            const response = await axios.post('http://localhost:5001/ResetPassword', { email, newPassword });
+            setMessage(response.data);
+            // Redirect to login page after successful password reset
+            window.location.href = '/Login';
+        } catch (error) {
+            setMessage(error.response.data);
+        }
+    };
+
     return(
       <div className="resetContainer">
         <div className="containerSpiral">

@@ -1,0 +1,141 @@
+.signupContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9A8979;
+}
+
+.signupContainer body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: 'background.png';
+}
+
+.signupContainer form {
+    margin: 0;  /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    border: none; /* Remove border, if any */
+    display: flex; /* Flexbox for layout, if needed */
+    flex-direction: column; /* Stacking form elements */
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.signupContainer input, label, button {
+    margin: 0; 
+    padding: 10px; 
+    box-sizing: border-box;
+    font-size: 20px; 
+}
+
+.signupContainer .spirals {
+    width: 96%;
+    position: absolute;
+    left: 2%;
+}
+
+.signupContainer .spiraled {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 68%;
+    z-index: 2;
+}
+.signupContainer .biggerpage {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 19px;
+    border-width: 60px;
+    background-color: white;
+    position: absolute;
+    bottom: 0%;
+}
+
+.signupContainer .button {
+    width:100%;
+    height: 70%;
+    border-radius: 51px;
+    border-width: 1px;
+    font-family: "Krona One";
+    font-size: 17px;
+    background-color: #B4C4A0;
+    margin-bottom: 2%;
+}
+
+.signupContainer .section {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-end;
+}
+.signupContainer .title {
+    box-sizing: border-box;
+    height: 30%;
+    margin-bottom: 3%;
+    font-family: "Londrina Solid";
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.signupContainer .type {
+    box-sizing: border-box;
+    height: 20%;
+    font-family: "KoHo";
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.signupContainer .createacct {
+    width: 100%;
+    height: 15%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.signupContainer .bigsection {
+    margin-bottom: 2%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+.signupContainer .enter {
+    background-color: #EFEFEF;
+    border-radius: 15px;
+    border-color: #EFEFEF;
+    box-shadow: inset 0px 0px 0px 0px red;
+    height: 50%;
+    width: 100%;
+}
+
+.signupContainer .button {
+    width:40%;
+    height: 70%;
+    border-radius: 51px;
+    border-width: 1px;
+    font-family: "Krona One";
+    font-size: 17px;
+    background-color: #B4C4A0;
+    margin-bottom: 2%;
+}
