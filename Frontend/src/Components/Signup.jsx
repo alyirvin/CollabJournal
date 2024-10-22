@@ -6,8 +6,13 @@ const Signup = () => {
     const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (password !== confirmPassword) {
+            alert('Password does not match')
+            return;
+        }
         // how to validate username and password
         // console.log('UserName:', user);
         // console.log('Email:', email);
@@ -79,6 +84,9 @@ const Signup = () => {
                                 <input
                                     class = 'enter'
                                     type="user"
+                                    value={confirmPassword}
+                                    onChange={(e) => setConfirmPassword(e.target.value)}
+                                    required
                                 />
                             </div>
                         </div>

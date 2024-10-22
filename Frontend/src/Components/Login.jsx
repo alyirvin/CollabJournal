@@ -66,10 +66,17 @@ const Login = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
-                            <a src = "reset.jsx">&nbsp;Forgot Password?</a>
+                            
                             </div>
                             <div class = 'type'>
                             <button class = "button" type="submit">Login</button>
+                            </div>
+                            <div class = 'type'>
+                                <button className="button">
+                                <Link className="button-prop" to="/Forgot">
+                                    <div id="button-text">Forgot Password</div>
+                                </Link>
+                                </button>
                             </div>
                             </form>
                     </div>
