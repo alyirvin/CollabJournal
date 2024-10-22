@@ -42,8 +42,8 @@ const CreateJournalPopup = ({ onClose, onJournalCreated, userId }) => {
                         onChange={(e) => setJournalDescription(e.target.value)}
                         required
                     />
-                    <button type="submit">Create Journal</button>
-                    <button type="button" onClick={onClose}>Cancel</button>
+                    <button type="submit">CREATE</button>
+                    <button type="button" onClick={onClose}>CANCEL</button>
                 </form>
                 {message && <p>{message}</p>}
             </div>

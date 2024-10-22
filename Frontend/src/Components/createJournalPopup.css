@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Krona+One');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
+
 /* src/Components/LoginSignup/createJournalPopup.css */
 .popup-container {
     position: fixed;
@@ -23,6 +26,9 @@
 
 .popup-content h2 {
     margin-top: 0;
+    font-family:"Londrina Solid";
+    font-size:30px;
+    font-weight:normal;
 }
 
 .popup-content form {
@@ -45,15 +51,17 @@
 .popup-content button {
     margin-top: 20px;
     padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #B4C4A0;
+    color: rgb(0, 0, 0);
     cursor: pointer;
+    font-family: "Krona One";
+    border-radius: 51px;
+    border:none;
+    font-size:17px;
 }
 
 .popup-content button[type="button"] {
-    background-color: #f44336;
+    background-color: #828282;
 }
 
 .popup-content button:hover {
