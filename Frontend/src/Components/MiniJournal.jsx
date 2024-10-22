@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import './miniJournal.css';
 import spiralSmall from './images/spiral-bind-short.png';
+import { Link } from 'react-router-dom';
 
 const MiniJournal = () => {
     return(
@@ -29,9 +30,9 @@ const MiniJournal = () => {
                             </button>
 
                             <button className="button">
-                                <a className="button-prop" href="journal-open.html">
+                                <Link className="button-prop" to="/JournalOpen">
                                     <div id="button-text">OPEN</div>
-                                </a>
+                                </Link>
                             </button>
                         </div>
                     </div>
