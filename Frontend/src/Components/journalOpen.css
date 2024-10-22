@@ -1,0 +1,60 @@
+.journalOpenContainer
+{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.journalOpenContainer .page
+{
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+.journalOpenContainer .cover-page 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background: #f0f0f0; /* Light grey for cover */
+    border: 2px solid #ccc;
+    height: 500px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.journalOpenContainer .page-content
+{
+    font-size: 20px;
+    text-align: center;
+}
+
+.journalOpenContainer .page1
+{
+    background-image: url('./images/01.jpg');
+    background-size: cover;
+}
+
+.journalOpenContainer .page2
+{
+    background-image: url('./images/02.jpg');
+    background-size: cover;
+}
+
+.journalOpenContainer .page3
+{
+    background-image: url('./images/03.jpg');
+    background-size: cover;
+}
+
+.journalOpenContainer .page4
+{
+    background-image: url('./images/04.jpg');
+    background-size: cover;
+}

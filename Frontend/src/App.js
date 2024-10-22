@@ -5,6 +5,7 @@ import Login from './Components/Login';
 import Forgot from './Components/Forgot';
 import Groups from './Components/Groups';
 import Reset from './Components/Reset';
+import JournalOpen from './Components/JournalOpen';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/Groups" element={<Groups/>} />
           <Route path="/Forgot" element={<Forgot/>} />
           <Route path="/Reset" element={<Reset/>} />
+          <Route path="/JournalOpen" element={<JournalOpen/>} />
         </Routes>
       </Router>
     </div>
