@@ -51,21 +51,27 @@ const Groups = () => {
             <div className="title">
                 MY JOURNALS
             </div>
-            <button onClick={() => setShowPopup(true)}>Create a New Journal</button>
-            {showPopup && (
-                <CreateJournalPopup
-                    onClose={() => setShowPopup(false)}
-                    onJournalCreated={handleJournalCreated}
-                    userId={userId} // Pass userId to popup
-                />
-            )}
-            {journals.length > 0 ? (
-                journals.map((journal) => (
-                    <MiniJournal key={journal._id} journal={journal} />
-                ))
-            ) : (
-                <p>No journals found.</p>
-            )}
+            <div className="journal-button-container">
+                <div className="miniJournalContainer"> 
+                    {journals.length > 0 ? (
+                        journals.map((journal) => (
+                            <MiniJournal key={journal._id} journal={journal} />
+                        ))
+                    ) : (
+                        <p>No journals found.</p>
+                    )}
+                </div>
+                <div className="add-button">
+                    <button className="add-journal-button" onClick={() => setShowPopup(true)}>+</button>
+                    {showPopup && (
+                        <CreateJournalPopup
+                            onClose={() => setShowPopup(false)}
+                            onJournalCreated={handleJournalCreated}
+                            userId={userId} // Pass userId to popup
+                        />
+                    )}
+                </div>
+            </div>
         </div>
     );
 };

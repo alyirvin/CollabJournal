@@ -7,6 +7,15 @@
     width: 100%;
 }
 
+.groupsContainer p{
+    margin-right: 30px;
+    margin-left: 50px;
+    padding: 10px;
+    font:"Krona One";
+    font-size: 20px;
+}
+
+
 .groupsContainer body {
     margin: 5px;
     background-color:white;
