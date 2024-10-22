@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './landing.css';
 import spiralBind from './images/spiral-bind-short.png';
-import logo from './images/logo.png';
+import logo from './images/logo-new.png';
 import { Link } from 'react-router-dom';
 
 
@@ -14,7 +14,7 @@ const Landing = () => {
             </div>
 
             <div className = "right-side">  
-                
+
                 <div className = "spiral-container">
 
                     <img src={spiralBind} alt="spiral" id="spiral"/>    
@@ -44,7 +44,6 @@ const Landing = () => {
 
             <div className="left-side">
                 <div className="logo-container">
-                    {/* <img id="logo" src={logo} alt="CollabJournal"/> */}
                 </div>
             </div>
         </div>
