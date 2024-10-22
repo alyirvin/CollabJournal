@@ -1,7 +1,3 @@
-# Reorganize the files, convert html to js and implement into react app.js
+# Merged
 
-registration password hashing,  login verification 
-
-email to be combined into front end
-
-groups to implemented
+Except for the "Create Account" UI missing, all other functions are fully functional. The create journal is created mostly by copilot, it works but it's pretty delicate lol. We'll figure it out this week.
