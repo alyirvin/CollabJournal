@@ -1,78 +1,81 @@
 import './login.css';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import { toBeChecked } from '@testing-library/jest-dom/matchers';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 const Login = () => {
     const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // how to validate username and password
-        // console.log('UserName:', user);
-        // console.log('Email:' `, email);
-        // console.log('Password:', password);
         try {
             await axios.post('http://localhost:5001/Login', { user, email, password })
-            .then(res => {
-                if(res.data === "Exist") {
-                    alert("Success")
-                }
-                else if(res.data === "Not Found") {
-                    alert("failure")
-                }
-                else {
-                    alert("error")
-                }
-            })
-        }
-        catch(e) {
+                .then(res => {
+                    if (res.data.status === "Exist") {
+                        localStorage.setItem('userId', res.data.userId); // Store userId in localStorage
+                        alert("Success");
+                        window.location.href = '/Groups'; // Redirect to Groups page
+                        console.log(res.data.userId)
+                    } else if(res.data === "UserEmail not found") {
+                        alert("Username or Email not found")
+                    }
+                    else {
+                        alert("Wrong Password")
+                    }
+                });
+        } catch (e) {
             console.log(e);
         }
-      };
+    };
+
     return (
-        <div class = "loginContainer">
-        <div class = "biggerpage">
-            <div class = "section">
-                    <div class = "type">
+        <div className="loginContainer">
+            <div className="biggerpage">
+                <div className="section">
+                    <div className="type">
                         LOG IN
                     </div>
-            <form onSubmit={handleSubmit}>
-                <div class = "type">
-                    <label>Username:</label>
-                    <input class = "enter"
-                        type="user"
-                        value={user}
-                        onChange={(e) => setUser(e.target.value)}
-                        required
-                    />
+                    <form onSubmit={handleSubmit}>
+                        <div className="type">
+                            <label>Username:</label>
+                            <input className="enter"
+                                type="user"
+                                value={user}
+                                onChange={(e) => setUser(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="type">
+                            <label>Email:</label>
+                            <input className="enter"
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="type">
+                            <label>Password:</label>
+                            <input className="enter"
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <button className="button" type="submit">Login</button>
+                        <button className="button">
+                            <Link className="button-prop" to="/Forgot">
+                                <div id="button-text">Forgot Password</div>
+                            </Link>
+                        </button>
+                    </form>
                 </div>
-                <div class = "type">
-                    <label>Email:</label>
-                    <input class = "enter"
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-                <div class = "type">
-                <label>Password:</label>
-                <input class = "enter"
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                </div>
-                <button class = "button" type="submit">Login</button>
-            </form>
+            </div>
         </div>
-        <div class = "section">
+    );
+};
 
-        </div>
-    </div> 
-</div>
-    )
-}
 export default Login;
