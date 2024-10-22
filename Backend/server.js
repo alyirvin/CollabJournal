@@ -48,19 +48,19 @@ app.post('/Login', async (req, res) => {
                     res.send({ status: "Exist", userId: check._id })
                 }
                 else {
-                    res.send("Wrong Password")
+                    res.send({ status: "Wrong Password"})
                 }
             }
             catch(e) {
-                res.send("Wrong Password")
+                res.send({ status: "Wrong Password"})
             }
         }
         else {
-            res.send("UserEmail not found")
+            res.send({ status: "UserEmail not found"})
         }
     }
     catch(e) {
-        res.send("UserEmail not found")
+        res.send({ status: "UserEmail not found"})
     }
 })
 

@@ -1,14 +1,9 @@
 import './login.css';
 import React, { useState } from 'react';
 import axios from 'axios';
-<<<<<<< HEAD
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import spiralBind from './images/spirals.png';
 import background from './images/background.png';
-import { toBeChecked } from '@testing-library/jest-dom/matchers';
-=======
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-
->>>>>>> a22c3081841ad5590df29e649e4a2195faeb40e1
 const Login = () => {
     const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
@@ -24,7 +19,7 @@ const Login = () => {
                         alert("Success");
                         window.location.href = '/Groups'; // Redirect to Groups page
                         console.log(res.data.userId)
-                    } else if(res.data === "UserEmail not found") {
+                    } else if(res.data.status === "UserEmail not found") {
                         alert("Username or Email not found")
                     }
                     else {
