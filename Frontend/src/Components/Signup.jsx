@@ -3,7 +3,9 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import spiralBind from './images/spirals.png';
 const Signup = () => {
-    const [user, setUser] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -13,13 +15,22 @@ const Signup = () => {
             alert('Password does not match')
             return;
         }
-        // how to validate username and password
-        // console.log('UserName:', user);
-        // console.log('Email:', email);
-        // console.log('Password:', password);
-        await axios.post('http://localhost:5001/Signup', { user, email, password });
-        // TODO send an email for verification
-        alert('User information saved!');
+        await axios.post('http://localhost:5001/Signup1', {username, email, password })
+            .then(res => {
+                if(res.data === "User already exists") {
+                    alert("User already exists, please refresh the page")
+                }
+                else alert(`Welcome ${firstName} ${lastName}!`)
+            })
+        await axios.post('http://localhost:5001/Signup2', {firstName, lastName, username, email, password })
+            .then(res => {
+                if(res.data === "User added successfully") {
+                    alert("User information saved, your password has been hashed")
+                }
+                else if(res.data === "Hashing failed") {
+                    alert("Something went wrong :( please refresh the page")
+                }
+            })
       };
     return (
         <div class = "signupContainer">
@@ -35,6 +46,9 @@ const Signup = () => {
                                 <label>First Name:</label>
                                 <input
                                     class = 'enter'
+                                    type = "user"
+                                    value = {firstName}
+                                    onChange = {(e) => setFirstName(e.target.value)}
                                 />
                             </div>
                             <div class = 'type'>
@@ -42,8 +56,8 @@ const Signup = () => {
                                 <input
                                     class = 'enter'
                                     type="user"
-                                    value={user}
-                                    onChange={(e) => setUser(e.target.value)}
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)}
                                     required
                                 />
                             </div>
@@ -67,6 +81,8 @@ const Signup = () => {
                                 <input
                                     class = 'enter'
                                     type="user"
+                                    value = {lastName}
+                                    onChange = {(e) => setLastName(e.target.value)}
                                 />
                             </div>
                             <div class = 'type'>
@@ -83,7 +99,7 @@ const Signup = () => {
                                 <label>Confirm Password</label>
                                 <input
                                     class = 'enter'
-                                    type="user"
+                                    type="password"
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
                                     required
@@ -105,4 +121,3 @@ const Signup = () => {
 export default Signup;
 
 
-//TODO JCrypt

@@ -17,30 +17,42 @@ mongoose.connect("mongodb+srv://test:testtest@collaborativejournal.itlf7.mongodb
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-app.post('/Signup', async (req, res) => {
-    const {user, email, password} = req.body;
-
+app.post('/Signup1', async(req, res) => {
+    try {
+        const {username, email} = req.body
+        const check = await userCollection.findOne({username: username, email: email});
+        if(check) {
+            res.send("User already exists")
+        }
+        else {
+            res.send("User doesn't exist")
+        }
+    } catch(error) {
+        res.send("User doesn't exist")
+    }
+})
+app.post('/Signup2', async (req, res) => {
+    const {firstName, lastName, username, email, password} = req.body;
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
         const newUser = new userCollection({
-            name: user,
+            firstName: firstName,
+            lastName: lastName,
+            username: username,
             email: email,
             password: hashedPassword
         });
-
         await newUser.save();
-
         res.send('User added successfully');
     } catch(error) {
         res.send('Hashing failed');
     }
   });
 
-
 app.post('/Login', async (req, res) => {
-    const {user, email, password} = req.body;
+    const {username, email, password} = req.body;
     try {
-        const check = await userCollection.findOne({name: user, email: email});
+        const check = await userCollection.findOne({username: username, email: email});
         if(check) {
             try {
                 const checkPassword = await bcrypt.compare(password, check.password);
@@ -85,7 +97,8 @@ app.post('/ForgotPassword', async (req, res) => {
             from: '"Collaborative Journal" <collaborativejournalteamwebdev@gmail.com>', // sender address
             to: email, // list of receivers
             subject: "Password Reset", // Subject line
-            text: "Click the link to reset your password", // plain text body
+            text: `Hello, ${user.firstName} ${user.lastName}. Click the link to reset your password`, // plain text body
+            //TODO check if this line works
             html: `<b>Click the link to reset your password:</b> <a href="http://localhost:3000/Reset">Reset Password</a>` // html body
         });
 
@@ -111,11 +124,12 @@ app.post('/ResetPassword', async (req, res) => {
         res.send("Password updated successfully");
     } catch (e) {
         console.error("Error updating password:", e);
-        console.error(`Error details: ${e.message}\nStack trace: ${e.stack}`);
+        console.error(`Error details: ${e.message}\n Stack trace: ${e.stack}`);
         res.status(500).send(`Error updating password: ${e.message}`);
     }
 });
 
+//TODO: need to rewrite this part
 app.post('/CreateJournal', async (req, res) => {
     const { userId, journalName, journalDescription } = req.body;
     try {
@@ -148,6 +162,8 @@ app.get('/GetJournals', async (req, res) => {
     }
 });
 
+
 app.listen(5001, () => {
     console.log('Server is running on port 5001');
 });
+
