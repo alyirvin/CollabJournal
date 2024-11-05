@@ -114,3 +114,21 @@
     text-decoration: none;
     color: black;
 }
+
+.miniJournalContainer .delete-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.miniJournalContainer .delete-button:hover {
+    color: #ef7070;
+}
+
