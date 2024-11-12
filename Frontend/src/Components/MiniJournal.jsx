@@ -10,6 +10,7 @@ const MiniJournal = () => {
                 <div className="journal-container">
 
                     <div className="journal-item-container">
+                        <button className="delete-button">x</button>
                         <div className="spiral-container">
                             <img src={spiralSmall} alt="spiralSmall"/>
                         </div>
