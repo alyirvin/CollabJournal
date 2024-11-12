@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 import './groups.css';
 import MiniJournal from './MiniJournal';
-import CreateJournalPopup from './CreateJournalPopup'
-import AddToJournalPopup from './AddToJournalPopup'
+import CreateJournalPopup from './CreateJournalPopup';
+import AddToJournalPopup from './AddToJournalPopup';
+import GroupsAddCreatePopup from './GroupsAddCreatePopup';
+
 const Groups = () => {
-    const [showPopup, setShowPopup] = useState(false);
     const [journals, setJournals] = useState([]);
     const [userId, setUserId] = useState(null); // State to store userId
-    const [showPopup2, setShowPopup2] = useState(false);
+    const [showOptionPopup, setShowOptionPopup] = useState(false);
+    const [popupType, setPopupType] = useState(null);
+    const addButtonRef = useRef(null);
     useEffect(() => {
         const storedUserId = localStorage.getItem('userId');
         console.log("Stored userId from localStorage:", storedUserId); // Debug log
@@ -45,6 +48,11 @@ const Groups = () => {
             console.error("Error fetching journals:", error);
         }
     };
+    const handleOptionClick = (option) => {
+        setPopupType(option);
+        setShowOptionPopup(false);
+    };
+
 
     return (
         <div className="groupsContainer">
@@ -62,28 +70,32 @@ const Groups = () => {
                     )}
                 </div>
                 <div className="add-button">
-                    <button className="add-journal-button" onClick={() => setShowPopup(true)}>+</button>
-                    {
-                        showPopup && (
-                        <CreateJournalPopup
-                            onClose={() => setShowPopup(false)}
-                            onJournalCreated={handleJournalCreated}
-                            userId={userId} // Pass userId to popup
+                    <button ref={addButtonRef} className="add-journal-button" onClick={() => setShowOptionPopup(!showOptionPopup)}>+</button>
+                    {showOptionPopup && (
+                        <GroupsAddCreatePopup
+                            onClose={() => setShowOptionPopup(false)}
+                            onCreateNew={() => handleOptionClick('create')}
+                            onAddExisting={() => handleOptionClick('add')}
                         />
                     )}
                 </div>
-                <div className="add-button">
-                    <button className="add-journal-button" onClick={() => setShowPopup2(true)}>+</button>
-                    {
-                        showPopup2 && (
-                            <AddToJournalPopup
-                                onClose={() => setShowPopup2(false)}
-                                onJournalAdded={handleJournalCreated}
-                                userId={userId}
-                                />)
-                    }
-                </div>
             </div>
+        
+
+            {popupType === 'create' && (
+                <CreateJournalPopup
+                    onClose={() => setPopupType(null)}
+                    onJournalCreated={handleJournalCreated}
+                    userId={userId}
+                />
+            )}
+            {popupType === 'add' && (
+                <AddToJournalPopup
+                    onClose={() => setPopupType(null)}
+                    onJournalAdded={handleJournalCreated}
+                    userId={userId}
+                />
+            )}
         </div>
     );
 };
