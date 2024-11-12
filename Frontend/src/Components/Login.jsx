@@ -1,3 +1,4 @@
+//TODO: add greeting
 import './login.css';
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -5,18 +6,18 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import spiralBind from './images/spirals.png';
 import background from './images/background.png';
 const Login = () => {
-    const [user, setUser] = useState('');
+    const [username, setUser] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5001/Login', { user, email, password })
+            await axios.post('http://localhost:5001/Login', { username, email, password })
                 .then(res => {
                     if (res.data.status === "Exist") {
                         localStorage.setItem('userId', res.data.userId); // Store userId in localStorage
-                        alert("Success");
+                        alert(`Welcome ${res.data.firstName} ${res.data.lastName}!`);
                         window.location.href = '/Groups'; // Redirect to Groups page
                         console.log(res.data.userId)
                     } else if(res.data.status === "UserEmail not found") {
@@ -44,7 +45,7 @@ const Login = () => {
                                 <label>Username:</label>
                                 <input class = "enter"
                                     type="user"
-                                    value={user}
+                                    value={username}
                                     onChange={(e) => setUser(e.target.value)}
                                     required
                                 />

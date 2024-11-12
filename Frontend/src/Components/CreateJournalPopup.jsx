@@ -7,13 +7,14 @@ const CreateJournalPopup = ({ onClose, onJournalCreated, userId }) => {
     const [journalName, setJournalName] = useState('');
     const [journalDescription, setJournalDescription] = useState('');
     const [message, setMessage] = useState('');
-
+    const [journalKey, setJournalKey] = useState('');  
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:5001/CreateJournal', {
                 userId, // Use the passed userId
                 journalName,
+                journalKey,
                 journalDescription
             });
             setMessage(response.data);
@@ -34,6 +35,13 @@ const CreateJournalPopup = ({ onClose, onJournalCreated, userId }) => {
                         type="text"
                         value={journalName}
                         onChange={(e) => setJournalName(e.target.value)}
+                        required
+                    />
+                    <label> Journal Key: </label>
+                    <input
+                        type="text"
+                        value={journalKey}
+                        onChange={(e) => setJournalKey(e.target.value)}
                         required
                     />
                     <label>Journal Description:</label>

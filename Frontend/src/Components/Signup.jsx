@@ -24,10 +24,16 @@ const Signup = () => {
             })
         await axios.post('http://localhost:5001/Signup2', {firstName, lastName, username, email, password })
             .then(res => {
-                if(res.data === "User added successfully") {
+                if(res.data === "User already exists") {
+                    alert("User already exists, please refresh the page")
+                }
+                else if(res.data === "User added successfully") {
                     alert("User information saved, your password has been hashed")
                 }
                 else if(res.data === "Hashing failed") {
+                    alert("Something went wrong :( please refresh the page")
+                }
+                else {
                     alert("Something went wrong :( please refresh the page")
                 }
             })

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './groups.css';
 import MiniJournal from './MiniJournal';
-import CreateJournalPopup from './CreateJournalPopup'; // Import CreateJournalPopup
-
+import CreateJournalPopup from './CreateJournalPopup'
+import AddToJournalPopup from './AddToJournalPopup'
 const Groups = () => {
     const [showPopup, setShowPopup] = useState(false);
     const [journals, setJournals] = useState([]);
     const [userId, setUserId] = useState(null); // State to store userId
-
+    const [showPopup2, setShowPopup2] = useState(false);
     useEffect(() => {
         const storedUserId = localStorage.getItem('userId');
         console.log("Stored userId from localStorage:", storedUserId); // Debug log
@@ -63,13 +63,25 @@ const Groups = () => {
                 </div>
                 <div className="add-button">
                     <button className="add-journal-button" onClick={() => setShowPopup(true)}>+</button>
-                    {showPopup && (
+                    {
+                        showPopup && (
                         <CreateJournalPopup
                             onClose={() => setShowPopup(false)}
                             onJournalCreated={handleJournalCreated}
                             userId={userId} // Pass userId to popup
                         />
                     )}
+                </div>
+                <div className="add-button">
+                    <button className="add-journal-button" onClick={() => setShowPopup2(true)}>+</button>
+                    {
+                        showPopup2 && (
+                            <AddToJournalPopup
+                                onClose={() => setShowPopup2(false)}
+                                onJournalAdded={handleJournalCreated}
+                                userId={userId}
+                                />)
+                    }
                 </div>
             </div>
         </div>

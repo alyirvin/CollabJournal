@@ -3,7 +3,7 @@ import axios from 'axios';
 import './miniJournal.css';
 import spiralSmall from './images/spiral-bind-short.png';
 import { Link } from 'react-router-dom';
-
+//TODO: display name on the notebook
 const MiniJournal = () => {
     return(
         <div className="miniJournalContainer">
