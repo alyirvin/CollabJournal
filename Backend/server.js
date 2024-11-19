@@ -141,7 +141,6 @@ app.post('/ResetPassword', async (req, res) => {
     }
 });
 
-//TODO: need to rewrite this part
 app.post('/CreateJournal', async (req, res) => {
     const { userId, journalName, journalKey, journalDescription } = req.body;
     try {
@@ -199,7 +198,64 @@ app.post('/AddToJournal', async (req, res) => {
     }
 })
 
+
+app.delete('/api/journals/:id', async (req, res) => {
+    try {
+        const journal = await journalCollection.findByIdAndDelete(req.params.id);
+        if (!journal) {
+            return res.status(404).send('Journal not found');
+        }
+        res.send('Journal deleted successfully');
+    } catch (error) {
+        console.error('Error deleting journal:', error);
+        res.status(500).send('Server error');
+    }
+});
+
+app.post('/Delete', async (req, res) => {
+    const { journalId } = req.body;
+    try {
+        const journal = await journalCollection.findByIdAndDelete(journalId);
+        if (!journal) {
+            res.send("Journal not found");
+        }
+        res.send('Journal deleted successfully');
+    } catch (error) {
+        console.error('Error deleting journal:', error);
+        res.status(500).send('Server error');
+    }
+})
+
+app.put('/api/journals/:id', async (req, res) => {
+    try {
+        const journal = await journalCollection.findByIdAndUpdate(
+            req.params.id,
+            { $set: req.body },
+            { new: true }
+        );
+        if (!journal) {
+            return res.status(404).send('Journal not found');
+        }
+        res.send(journal);
+    } catch (error) {
+        console.error('Error updating journal:', error);
+        res.status(500).send('Server error');
+    }
+});
+
+app.get('/api/journals/:id', async (req, res) => {
+    try {
+        const journal = await journalCollection.findById(req.params.id);
+        if (!journal) {
+            return res.status(404).send('Journal not found');
+        }
+        res.send(journal);
+    } catch (error) {
+        console.error('Error fetching journal:', error);
+        res.status(500).send('Server error');
+    }
+});
+
 app.listen(5001, () => {
     console.log('Server is running on port 5001');
 });
-

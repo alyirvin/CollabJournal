@@ -19,7 +19,9 @@ const Groups = () => {
             setUserId(storedUserId);
         }
     }, []);
-
+    const handleDelete = (id) => {
+        setJournals(journals.filter(journal => journal._id !== id))
+    }
     useEffect(() => {
         const fetchJournals = async () => {
             try {
@@ -63,7 +65,7 @@ const Groups = () => {
                 <div className="miniJournalContainer"> 
                     {journals.length > 0 ? (
                         journals.map((journal) => (
-                            <MiniJournal key={journal._id} journal={journal} />
+                            <MiniJournal key={journal._id} journal={journal} onDelete={handleDelete} />
                         ))
                     ) : (
                         <p>No journals found.</p>

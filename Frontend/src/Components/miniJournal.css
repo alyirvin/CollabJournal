@@ -34,19 +34,37 @@
     
 }
 
-.miniJournalContainer #journal-name {
+.miniJournalContainer .journal-name {
     width: 200px;
     background-color: #9A8979;
     color: white;
     border: none;
     border-bottom: 2px solid white;
-    outline: none   ;
+    outline: none;
+    font-size: 30px;
 }
 
-.miniJournalContainer #journal-name:focus {
+.miniJournalContainer .journal-name:focus {
     border: none;
     border-bottom: 2px solid white;
     box-shadow: none;
+}
+
+.miniJournalContainer .journal-info-container {
+    width: 200px;
+    height: 50px;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+.miniJournalContainer .journal-info {
+    width: 200px;
+    background-color: #9A8979;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-bottom: 2px solid rgb(239, 180, 0);
+    outline: none;
+    font-size: 30px;
 }
 
 .miniJournalContainer input[type='text'] {
@@ -132,3 +150,21 @@
     color: #ef7070;
 }
 
+.select-shape {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style for the option elements */
+.select-shape option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}

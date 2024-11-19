@@ -19,6 +19,26 @@ const JournalSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    color: {
+        type: String,
+        required: true,
+    },
+    text: {
+        type: String,
+        required: true,
+    },
+    textPosition: {
+        type: Number,
+        required: true,
+    },
+    shape: {
+        type: String,
+        required: true,
+    },
+    shapes: {
+        type: Array,
+        required: true,
+    },
 
 });
 
